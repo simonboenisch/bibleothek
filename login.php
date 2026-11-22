@@ -8,3 +8,5 @@ if($password == "1234"){
     $_SESSION['logedin'] = true;
     header("Location: index.php");
 }
+
+exit;
