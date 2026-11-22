@@ -16,5 +16,5 @@ $stmt->bindValue(':bis', $bis, SQLITE3_TEXT);
 
 $result = $stmt->execute();
 
-header("Location: test.php");
+header("Location: index.php");
 exit;
