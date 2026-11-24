@@ -1,0 +1,1 @@
+Dies ist ein kleines Tool, das Schulkameraden, die für die Verwaltung der Schülerbibliothek zuständig sind, dabei hilft, Personen, die sich nicht benehmen konnten, in einer Datenbank festzuhalten und grafisch als Liste darzustellen.
