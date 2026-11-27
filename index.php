@@ -18,11 +18,12 @@
         <?php
         if (($_SESSION['logedin'] ?? false) === true) {
             $db = new SQLite3("data.db");
-            $result = $db->query('SELECT name, class, von, bis FROM banned');
+            $result = $db->query('SELECT name, vorname, class, von, bis FROM banned');
 
             $rowsHtml = '';
             while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
                 $name = htmlspecialchars((string) $row['name'], ENT_QUOTES, 'UTF-8');
+                $vorname = htmlspecialchars((string) $row['vorname'], ENT_QUOTES, 'UTF-8');
                 $class = htmlspecialchars((string) $row['class'], ENT_QUOTES, 'UTF-8');
                 $von = htmlspecialchars((string) $row['von'], ENT_QUOTES, 'UTF-8');
                 $bis = htmlspecialchars((string) $row['bis'], ENT_QUOTES, 'UTF-8');
@@ -30,6 +31,7 @@
                 $rowsHtml .= <<<ROW
                     <tr style="border-bottom: 2px solid gray">
                       <td>{$name}</td>
+                      <td>{$vorname}</td>
                       <td>{$class}</td>
                       <td>{$von}</td>
                       <td>{$bis}</td>
@@ -46,6 +48,7 @@
                 <thead>
                   <tr>
                     <td>Name</td>
+                    <td>Vorname</td>
                     <td>Klasse</td>
                     <td>Von</td>
                     <td>Bis</td>
@@ -63,6 +66,10 @@
                 <div>
                   <label for="name">Name:</label>
                   <input type="text" name="name" />
+                </div>
+                <div>
+                  <label for="name">Vorname:</label>
+                  <input type="text" name="vorname" />
                 </div>
                 <div>
                   <label for="class">Klasse:</label>
