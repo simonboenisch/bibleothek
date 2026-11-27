@@ -59,7 +59,7 @@
                 </tbody>
               </table>
             </div>
-
+            <p>test</p>
             <section class="add">
               <form action="add.php" method="post" class="addform">
                 <h3>Schüler hinzufügen:</h3>
