@@ -59,7 +59,7 @@
                 </tbody>
               </table>
             </div>
-            <p>test</p>
+            
             <section class="add">
               <form action="add.php" method="post" class="addform">
                 <h3>Schüler hinzufügen:</h3>
@@ -82,6 +82,10 @@
                 <div id="bis">
                   <label for="bis">Bis:</label>
                   <input type="text" name="bis" />
+                </div>
+                <div id="bis">
+                  <label for="perma">Permanent:</label>
+                  <input type="checkbox" name="perma" />
                 </div>
                 <div>
                   <input type="submit" class="submit" />
